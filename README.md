@@ -46,16 +46,6 @@ console.log(`${Platform.OS}: ${statusBarHeight},${bottomSpace}`);
 
 <br/>
 
-## ✨Expo에서 기본 제공되는 아이콘 사용하기
-
-- 어떤 아이콘이 있는지 [사이트](https://icons.expo.fyi/)에서 확인가능
-- 사이트에서 아이콘 고르고 클릭하면 코드 복사 가능
-
-```js
-import { Ionicons } from '@expo/vector-icons';
-<Ionicons name="ios-settings-outline" size={24} color="black" />;
-```
-
 ### 방법3: react-native-safe-area-context사용하기
 
 - 사용법 git[https://github.com/th3rdwave/react-native-safe-area-context] 참고
@@ -79,4 +69,16 @@ export default function App() {
     </SafeAreaProvider>
   );
 }
+```
+
+<br/>
+
+## ✨Expo에서 기본 제공되는 아이콘 사용하기
+
+- 어떤 아이콘이 있는지 [사이트](https://icons.expo.fyi/)에서 확인가능
+- 사이트에서 아이콘 고르고 클릭하면 코드 복사 가능
+
+```js
+import { Ionicons } from '@expo/vector-icons';
+<Ionicons name="ios-settings-outline" size={24} color="black" />;
 ```
