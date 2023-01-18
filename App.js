@@ -1,29 +1,45 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Header from './src/Header';
-import {
-  getStatusBarHeight,
-  getBottomSpace,
-} from 'react-native-iphone-x-helper';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import Margin from './src/Margin';
-import MyProfile from './src/MyProfile';
+import Division from './src/Division';
+import Profile from './src/Profile';
 import { myProfile, friendProfiles } from './src/data';
+import FriendSection from './src/FriendSection';
+import FriendList from './src/FriendList';
 
 const statusBarHeight = getStatusBarHeight(true);
-const bottomSpace = getBottomSpace();
 
 export default function App() {
+  const onPressArrow = () => {
+    console.log('clicked Arrow');
+  };
+
   return (
     <View style={styles.container}>
       <Header />
 
       <Margin height={10} />
 
-      <MyProfile
+      <Profile
         uri={myProfile.uri}
         name={myProfile.name}
         introduction={myProfile.introduction}
       />
+
+      <Margin height={15} />
+
+      <Division />
+
+      <Margin height={12} />
+
+      <FriendSection
+        friendProfileLen={friendProfiles.length}
+        onPressArrow={onPressArrow}
+      />
+
+      <FriendList data={friendProfiles} />
     </View>
   );
 }
@@ -33,5 +49,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: statusBarHeight,
     backgroundColor: '#fff',
+    paddingHorizontal: 15,
   },
 });
