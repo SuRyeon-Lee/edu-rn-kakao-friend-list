@@ -55,3 +55,28 @@ console.log(`${Platform.OS}: ${statusBarHeight},${bottomSpace}`);
 import { Ionicons } from '@expo/vector-icons';
 <Ionicons name="ios-settings-outline" size={24} color="black" />;
 ```
+
+### 방법3: react-native-safe-area-context사용하기
+
+- 사용법 git[https://github.com/th3rdwave/react-native-safe-area-context] 참고
+- edges 라는 prop을 조절해서 원하는 엣지는 안전영역 적용을 풀 수 있다.
+
+```bash
+  npm install react-native-safe-area-context
+```
+
+```js
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+// react-native의 SafeAreaView와 이름이 똑같으니 주의
+export default function App() {
+  return (
+    {/*최상위 root SafeAreaView로 감싸기*/}
+    <SafeAreaProvider>
+      {/*안전영역에 만들어 사용할 컴포넌트 작성하기*/}
+      <SafeAreaView edges={['right','left']}>
+        <Header />
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+}
+```
