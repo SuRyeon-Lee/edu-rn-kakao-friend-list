@@ -98,3 +98,17 @@ import { Ionicons } from '@expo/vector-icons';
 - [참고1-ScrollView vs Flatlist](https://reactnative.dev/docs/scrollview)[참고2-Flatlist](https://reactnative.dev/docs/flatlist)[참고3](https://velog.io/@7p3m1k/react-native-%ED%83%9C%EA%B7%B8-ScrollView-FlatList)
 
 <br/>
+
+## 💅 Styled Components 사용하기
+
+- Expo doc에 [사용법](https://docs.expo.dev/guides/using-styled-components/) 나와있음
+
+```js
+//꼭 styled-components/native에서 import!
+import styled from 'styled-components/native';
+
+//html태그이름대신 native core component 이름을 적으면 된다.
+const Container = styled.View`
+  flex-direction: row;
+`;
+```
