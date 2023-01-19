@@ -1,3 +1,4 @@
+//현재 FlatList 사용하면서 사용안하게됨
 import { ScrollView, View } from 'react-native';
 import Profile from './Profile';
 import Margin from './Margin';

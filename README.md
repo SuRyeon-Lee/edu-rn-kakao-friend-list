@@ -82,3 +82,19 @@ export default function App() {
 import { Ionicons } from '@expo/vector-icons';
 <Ionicons name="ios-settings-outline" size={24} color="black" />;
 ```
+
+<br/>
+
+## ✨ScrollView와 FlatList
+
+|                 ScrollView                  |                           FlatList                            |
+| :-----------------------------------------: | :-----------------------------------------------------------: |
+|         렌더를 한번에 다 처리한다.          |             화면에 보이는 필요한 부분만 렌더한다.             |
+| 처리해야 할 데이터 양이 적은 경우 사용한다. | 데이터의 길이가 변할 수 있고, 데이터의 양을 모를 때 사용한다. |
+
+- `ScrollView`는 스크롤을 빠르게 내리면, 데이터 처리속도가 스크롤을 내리는 속도를 따라가지 못해서
+  일시적으로 흰색화면만 보이게 될수도있다.
+- `FlatList`는 설정한 갯수만큼 화면에 보이도록 만드는 것도 가능하다.
+- [참고1-ScrollView vs Flatlist](https://reactnative.dev/docs/scrollview)[참고2-Flatlist](https://reactnative.dev/docs/flatlist)[참고3](https://velog.io/@7p3m1k/react-native-%ED%83%9C%EA%B7%B8-ScrollView-FlatList)
+
+<br/>
